@@ -58,6 +58,30 @@ const songs = [
         artist : "Sokhna Aba",
         image: require('../assets/lafemme.jpeg'),
         id: "10",
+    },
+        {
+        title : "ngistal2",
+        artist : "Sokhna Aba",
+        image: require('../assets/lafemme.jpeg'),
+        id: "11",
+    },
+    {
+        title : "yéém dieuf2",
+        artist : "Sokhna Aba",
+        image: require('../assets/lafemme.jpeg'),
+        id: "12",
+    },
+    {
+        title : "dieuw2",
+        artist : "Sokhna Aba",
+        image: require('../assets/lafemme.jpeg'),
+        id: "13",
+    },
+    {
+        title : "la haine2",
+        artist : "Sokhna Aba",
+        image: require('../assets/lafemme.jpeg'),
+        id: "14",
     }
    
 ]
