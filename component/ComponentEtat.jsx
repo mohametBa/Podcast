@@ -5,19 +5,9 @@ class ComponentEtat extends Component {
     constructor(props){
         super(props)
         this.state = {
-            count: 0
+            icone: 0
         }
     }
-    incriment(){
-        this.setState({
-            count : this.state.count + 1
-        })
-    
-    }
-    soustract(){
-        this.setState({
-            count : this.state.count - 1
-        })}
 
     render(){
         const Cc = this.state.count;
