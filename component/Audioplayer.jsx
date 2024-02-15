@@ -35,17 +35,26 @@ function Audioplayer() {
   }, []);
   // changer de song avec le bouton
 
-  const skipNext = () => {
-      songSlider.current.scrollToOffset({
-        offset: (songsIndex + 1) * width,
-      });
-  };
+ const handleNextSong = () => {
+  // Vérifiez si vous êtes à la fin du tableau, si oui, revenez au début
+  if (songsIndex === songs.length - 1) {
+    setSongIndex(0);
+  } else {
+    // Sinon, passez à la chanson suivante
+    setSongIndex(prevIndex => prevIndex + 1);
+  }}
 
-  const skipPrevious = () => {
-    songSlider.current.scrollToOffset({
-      offset: (songsIndex - 1) * width,
-    });
-  };
+  const handleprevSong = () => {
+    // Vérifiez si vous êtes à la fin du tableau, si oui, revenez au début
+    if (songsIndex === songs.length + 1) {
+      setSongIndex(0);
+    }  else if (songsIndex === 0) {
+      // Sinon, passez à la chanson suivante
+      setSongIndex(prevIndex => prevIndex)}
+      else {
+        setSongIndex(prevIndex => prevIndex -1 )
+      }
+  }
 
   // j'utilise mon data
   const renderSongs = ({index, item}) => {
@@ -67,7 +76,6 @@ function Audioplayer() {
       </Animated.View>
     );
   };
-console.log("aaaaaaaa",title)
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainContainer}>
